@@ -2,13 +2,15 @@ import sys
 import json
 import time
 from PyQt6.QtWidgets import (
-    QApplication, QMainWindow, QVBoxLayout, QHBoxLayout, QPushButton,
-    QLineEdit, QTreeView, QColumnView, QLabel, QWidget, QStackedWidget, QFileDialog, QTableWidget, QTableWidgetItem, QComboBox
+    QApplication, QMainWindow, QVBoxLayout, QPushButton,
+    QLineEdit, QTreeView, QColumnView, QLabel, QWidget, QStackedWidget, QFileDialog, QTableWidget, QTableWidgetItem,
+    QComboBox
 )
-from PyQt6.QtCore import Qt, QAbstractItemModel, QModelIndex
+from PyQt6.QtCore import Qt, QModelIndex
 from PyQt6.QtGui import QStandardItemModel, QStandardItem
 import pyqtgraph as pg
 import numpy as np
+
 
 class ExperimentWindow(QMainWindow):
     def __init__(self):
@@ -85,7 +87,6 @@ class ExperimentWindow(QMainWindow):
         elif selected_topic == 'Real File System':
             self.current_dataset = 'real_file_system'
             self.target_entry = 'Documents'
-            # Simulate a file system structure
             data = {
                 'C:': {
                     'Program Files': {
@@ -130,13 +131,13 @@ class ExperimentWindow(QMainWindow):
 
     def populate_tree_view(self, data):
         model = QStandardItemModel()
-        self.add_items(model, data)
+        self.add_items(model.invisibleRootItem(), data)
         self.tree_view.setModel(model)
         self.tree_view.expandAll()
 
     def populate_column_view(self, data):
         model = QStandardItemModel()
-        self.add_items(model, data)
+        self.add_items(model.invisibleRootItem(), data)
         self.column_view.setModel(model)
 
     def add_items(self, parent, data):
@@ -151,7 +152,7 @@ class ExperimentWindow(QMainWindow):
         self.stacked_widget.setCurrentIndex(0)  # Switch to tree view
         self.tree_view.clicked.connect(self.item_clicked)
 
-        # Alternative: switch to column view
+        # Uncomment to switch to column view
         # self.stacked_widget.setCurrentIndex(1)
         # self.column_view.clicked.connect(self.item_clicked)
 
@@ -184,7 +185,7 @@ class AnalysisWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle('Experiment Analysis')
         self.setGeometry(100, 100, 800, 600)
-        
+
         self.initUI()
 
     def initUI(self):
@@ -227,12 +228,12 @@ class AnalysisWindow(QMainWindow):
 
     def create_visualizations(self, results):
         self.plot_widget.clear()
-        
+
         # Histogram of times
         times = [result['time'] for result in results]
-        hist = pg.PlotWidget(title='Histogram of Times')
+        hist = pg.PlotItem(title='Histogram of Times')
         y, x = np.histogram(times, bins='auto')
-        hist.plot(x, y, stepMode=True, fillLevel=0, brush=(0,0,255,150))
+        hist.plot(x, y, stepMode=True, fillLevel=0, brush=(0, 0, 255, 150))
         self.plot_widget.addItem(hist)
 
         # Bar chart of average times per dataset
@@ -244,11 +245,12 @@ class AnalysisWindow(QMainWindow):
             dataset_times[dataset].append(result['time'])
 
         datasets = list(dataset_times.keys())
-        avg_times = [sum(times)/len(times) for times in dataset_times.values()]
+        avg_times = [sum(times) / len(times) for times in dataset_times.values()]
 
         bar_chart = pg.BarGraphItem(x=range(len(datasets)), height=avg_times, width=0.6, brush='r')
-        bar_plot = self.plot_widget.addPlot(title='Average Times per Dataset')
+        bar_plot = pg.PlotItem(title='Average Times per Dataset')
         bar_plot.addItem(bar_chart)
+        self.plot_widget.addItem(bar_plot)
 
         # Line graph of times per participant
         participants = list(set(result['participant'] for result in results))
@@ -256,9 +258,11 @@ class AnalysisWindow(QMainWindow):
         for result in results:
             participant_times[result['participant']].append(result['time'])
 
-        line_plot = self.plot_widget.addPlot(title='Times per Participant')
+        line_plot = pg.PlotItem(title='Times per Participant')
         for participant, times in participant_times.items():
             line_plot.plot(times, pen=pg.mkPen(width=2, name=participant))
+        self.plot_widget.addItem(line_plot)
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

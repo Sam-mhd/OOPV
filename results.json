@@ -1,0 +1,41 @@
+{"participant": "Nico", "dataset": "biological_taxonomy", "entry": "Homo sapiens", "time": 16.258344888687134}
+{"participant": "Nico", "dataset": "biological_taxonomy", "entry": "Homo sapiens", "time": 21.686339378356934}
+{"participant": "Nico", "dataset": "biological_taxonomy", "entry": "Homo sapiens", "time": 22.244446754455566}
+{"participant": "Nico", "dataset": "biological_taxonomy", "entry": "Homo sapiens", "time": 4.739067316055298}
+{"participant": "Nico", "dataset": "biological_taxonomy", "entry": "Homo sapiens", "time": 4.740085124969482}
+{"participant": "Nico", "dataset": "biological_taxonomy", "entry": "Homo sapiens", "time": 5.449294567108154}
+{"participant": "Nico", "dataset": "biological_taxonomy", "entry": "Homo sapiens", "time": 5.451412916183472}
+{"participant": "Ss", "dataset": "biological_taxonomy", "entry": "Homo sapiens", "time": 4.36958646774292}
+{"participant": "Ss", "dataset": "biological_taxonomy", "entry": "Homo sapiens", "time": 4.370567798614502}
+{"participant": "Ss", "dataset": "biological_taxonomy", "entry": "Homo sapiens", "time": 4.370567798614502}
+{"participant": "MA", "dataset": "biological_taxonomy", "entry": "Homo sapiens", "time": 4.064187049865723}
+{"participant": "MA", "dataset": "biological_taxonomy", "entry": "Homo sapiens", "time": 4.065149784088135}
+{"participant": "MA", "dataset": "biological_taxonomy", "entry": "Homo sapiens", "time": 4.06614089012146}
+{"participant": "MA", "dataset": "biological_taxonomy", "entry": "Homo sapiens", "time": 4.06614089012146}
+{"participant": "N", "dataset": "synthetic_data", "entry": "target_entry", "time": 6.308810234069824}
+{"participant": "A", "dataset": "synthetic_data", "entry": "target_entry", "time": 3.5272903442382812}
+{"participant": "A", "dataset": "synthetic_data", "entry": "target_entry", "time": 3.528517723083496}
+{"participant": "M", "dataset": "synthetic_data", "entry": "target_entry", "time": 2.5431365966796875}
+{"participant": "M", "dataset": "synthetic_data", "entry": "target_entry", "time": 2.544133424758911}
+{"participant": "M", "dataset": "synthetic_data", "entry": "target_entry", "time": 2.5451300144195557}
+{"participant": "a", "dataset": "synthetic_data", "entry": "target_entry", "time": 1.765214204788208}
+{"participant": "ab", "dataset": "real_file_system", "entry": "Documents", "time": 4.34245228767395}
+{"participant": "ab", "dataset": "real_file_system", "entry": "Documents", "time": 4.343449115753174}
+{"participant": "abc", "dataset": "real_file_system", "entry": "Documents", "time": 5.412748575210571}
+{"participant": "abc", "dataset": "real_file_system", "entry": "Documents", "time": 5.413744926452637}
+{"participant": "abc", "dataset": "real_file_system", "entry": "Documents", "time": 5.41474175453186}
+{"participant": "abc", "dataset": "synthetic_data", "entry": "target_entry", "time": 1.6179659366607666}
+{"participant": "abc", "dataset": "synthetic_data", "entry": "target_entry", "time": 1.6189758777618408}
+{"participant": "abc", "dataset": "synthetic_data", "entry": "target_entry", "time": 1.6189758777618408}
+{"participant": "abc", "dataset": "synthetic_data", "entry": "target_entry", "time": 1.6199703216552734}
+{"participant": "abcd", "dataset": "synthetic_data", "entry": "target_entry", "time": 1.1950860023498535}
+{"participant": "abcd", "dataset": "synthetic_data", "entry": "target_entry", "time": 1.1960208415985107}
+{"participant": "abcd", "dataset": "synthetic_data", "entry": "target_entry", "time": 1.1975467205047607}
+{"participant": "abcd", "dataset": "synthetic_data", "entry": "target_entry", "time": 1.1978824138641357}
+{"participant": "abcd", "dataset": "synthetic_data", "entry": "target_entry", "time": 1.1989893913269043}
+{"participant": "abcde", "dataset": "synthetic_data", "entry": "target_entry", "time": 2.844977378845215}
+{"participant": "abcde", "dataset": "synthetic_data", "entry": "target_entry", "time": 2.845472812652588}
+{"participant": "abcde", "dataset": "synthetic_data", "entry": "target_entry", "time": 2.846496343612671}
+{"participant": "abcde", "dataset": "synthetic_data", "entry": "target_entry", "time": 2.8474924564361572}
+{"participant": "abcde", "dataset": "synthetic_data", "entry": "target_entry", "time": 2.8474924564361572}
+{"participant": "abcde", "dataset": "synthetic_data", "entry": "target_entry", "time": 2.8484890460968018}
