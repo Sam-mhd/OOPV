@@ -1,0 +1,24 @@
+{
+    "Animalia": {
+        "Chordata": {
+            "Mammalia": {
+                "Primates": {},
+                "Carnivora": {}
+            },
+            "Aves": {
+                "Passeriformes": {},
+                "Accipitriformes": {}
+            }
+        },
+        "Arthropoda": {
+            "Insecta": {
+                "Coleoptera": {},
+                "Diptera": {}
+            },
+            "Arachnida": {
+                "Araneae": {},
+                "Scorpiones": {}
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "home": {
+        "user": {
+            "documents": {},
+            "pictures": {},
+            "videos": {}
+        },
+        "guest": {
+            "downloads": {},
+            "music": {},
+            "public": {}
+        }
+    },
+    "var": {
+        "log": {},
+        "tmp": {},
+        "www": {}
+    }
+}
